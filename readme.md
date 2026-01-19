@@ -49,4 +49,5 @@ Onde:
 
 ## 📂 Estrutura de Arquivos
 
-```text
+```Assets - pastas alem do index
+```Index - arquivo principal do projeto
