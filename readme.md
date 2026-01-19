@@ -49,5 +49,8 @@ Onde:
 
 ## 📂 Estrutura de Arquivos
 
-```Assets - pastas alem do index
-```Index - arquivo principal do projeto
+```text
+/
+├── index.html   # Contém o HTML
+├── assets       # Contém o arquivo javascript e o css
+└── README.md    # Documentação do projeto
