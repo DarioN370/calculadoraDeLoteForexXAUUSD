@@ -1,43 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Lote - M.V</title>
-    <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="clocks">
+        <div class="clock-item">
+          <span>Londres</span>
+          <div id="london-time">00:00:00</div>
+        </div>
+        <div class="clock-item">
+          <span>Nova York</span>
+          <div id="ny-time">00:00:00</div>
+        </div>
+      </div>
+      <h2>Calculadora de Lote</h2>
 
-<div class="container">
-    <div class="clocks">
-    <div class="clock-item">
-        <span>Londres</span>
-        <div id="london-time">00:00:00</div>
-    </div>
-    <div class="clock-item">
-        <span>Nova York</span>
-        <div id="ny-time">00:00:00</div>
-    </div>
-</div>
-    <h2>Calculadora de Lote</h2>
-    
-    <div class="input-group">
+      <div class="input-group">
         <label for="valorAlvo">Valor Alvo ($)</label>
-        <input type="number" id="valorAlvo" placeholder="Ex: 1000">
-    </div>
+        <input type="number" id="valorAlvo" placeholder="Ex: 1000" />
+      </div>
 
-    <div class="input-group">
+      <div class="input-group">
         <label for="qtdPontos">Quantidade de Pontos</label>
-        <input type="number" id="qtdPontos" placeholder="Ex: 50">
-    </div>
+        <input type="number" id="qtdPontos" placeholder="Ex: 50" />
+      </div>
 
-    <button onclick="calcularLote()">Calcular Lote</button>
+      <button onclick="calcularLote()">Calcular Lote</button>
 
-    <div class="result-box" id="resultBox">
+      <div class="result-box" id="resultBox">
         <span>Resultado do Lote:</span>
         <div id="loteResult">0.00</div>
+      </div>
+
+      <div class="simulation-container">
+        <h3>Simulador de Fuso Horário</h3>
+        <div class="input-group">
+          <label for="horaBrasilia">Horário de Brasília (BRT)</label>
+          <input type="time" id="horaBrasilia" onchange="simularFuso()" />
+        </div>
+
+        <div class="sim-results">
+          <div class="sim-item">
+            <span>Londres:</span>
+            <strong id="sim-london">--:--</strong>
+          </div>
+          <div class="sim-item">
+            <span>Nova York:</span>
+            <strong id="sim-ny">--:--</strong>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<script src="assets/script.js"></script>
-</body>
+    <script src="assets/script.js"></script>
+  </body>
 </html>

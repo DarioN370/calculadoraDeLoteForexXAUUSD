@@ -47,3 +47,26 @@ function updateClocks() {
 setInterval(updateClocks, 1000);
 // Chama uma vez ao carregar para não esperar 1 segundo
 updateClocks();
+
+
+function simularFuso() {
+  const horaInput = document.getElementById("horaBrasilia").value;
+  if (!horaInput) return;
+
+  const [horas, minutos] = horaInput.split(':');
+  
+  // Criamos uma data baseada no dia de hoje com o horário digitado (Horário de Brasília)
+  const dataBase = new Date();
+  dataBase.setHours(horas, minutos, 0);
+
+  const formatar = (fuso) => {
+    return dataBase.toLocaleTimeString('pt-BR', {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: fuso
+    });
+  };
+
+  document.getElementById('sim-london').innerText = formatar('Europe/London');
+  document.getElementById('sim-ny').innerText = formatar('America/New_York');
+}

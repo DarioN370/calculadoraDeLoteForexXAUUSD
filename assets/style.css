@@ -106,3 +106,35 @@ button:hover {
   font-weight: bold;
   color: #22c55e;
 }
+
+.simulation-container {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed #334155;
+}
+
+.simulation-container h3 {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sim-results {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0f172a;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sim-item span {
+  font-size: 0.8rem;
+  display: block;
+  color: #94a3b8;
+}
+
+.sim-item strong {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
