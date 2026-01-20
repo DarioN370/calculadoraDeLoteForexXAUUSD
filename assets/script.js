@@ -20,3 +20,30 @@ function calcularLote() {
   });
   resultBox.style.display = "block";
 }
+
+function updateClocks() {
+  const options = {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  };
+
+  const londonTime = new Date().toLocaleTimeString('pt-BR', {
+    ...options,
+    timeZone: 'Europe/London'
+  });
+
+  const nyTime = new Date().toLocaleTimeString('pt-BR', {
+    ...options,
+    timeZone: 'America/New_York'
+  });
+
+  document.getElementById('london-time').innerText = londonTime;
+  document.getElementById('ny-time').innerText = nyTime;
+}
+
+// Atualiza a cada segundo
+setInterval(updateClocks, 1000);
+// Chama uma vez ao carregar para não esperar 1 segundo
+updateClocks();

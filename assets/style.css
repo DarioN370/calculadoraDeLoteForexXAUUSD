@@ -16,6 +16,32 @@ body {
   margin: 0;
 }
 
+.clocks {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+.clock-item {
+  text-align: center;
+}
+
+.clock-item span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #94a3b8;
+  display: block;
+}
+
+.clock-item div {
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
 .container {
   background-color: var(--card-bg);
   padding: 2rem;
